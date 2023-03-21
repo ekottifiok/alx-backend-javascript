@@ -13,11 +13,12 @@
         "no-console": "off",
         "no-shadow": "off",
         "no-use-before-define": "off",
+        "no-unused-vars": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
             {
-                "js": "never",
+                "js": "always",
                 "jsx": "never",
                 "ts": "never",
                 "tsx": "never"
