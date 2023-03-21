@@ -1,5 +1,3 @@
 export default function iterateThroughObject(reportWithIterator) {
-    for (i) {
-
-    }
+  return Array.from(reportWithIterator).join(' | ');
 }
