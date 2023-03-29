@@ -1,5 +1,5 @@
 export default class HolbertonClass {
-  constructor(location, size) {
+  constructor(size, ) {
     this.size = size;
     this.location = location;
   }
@@ -8,7 +8,6 @@ export default class HolbertonClass {
   * @param {String} size
   */
   set size(size) {
-    if (typeof size !== 'string') throw new TypeError('Size must be a String');
     this._size = size;
   }
 
@@ -20,7 +19,6 @@ export default class HolbertonClass {
    * @param {Number} location
    */
   set location(location) {
-    if (typeof location !== 'number') throw new TypeError('Location must be a Number');
     this._location = location;
   }
 
