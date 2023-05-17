@@ -10,13 +10,13 @@
 			"path": "0x02-ES6_classes"
 		},
 		{
-			"path": "../../Github/franklinobasy/alx-backend-javascript"
-		},
-		{
 			"path": "0x03-ES6_data_manipulation"
 		},
 		{
 			"path": "0x04-TypeScript"
+		},
+		{
+			"path": "0x05-Node_JS_basic"
 		}
 	],
 	"settings": {}
