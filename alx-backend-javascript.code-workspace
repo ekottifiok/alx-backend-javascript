@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "0x05-Node_JS_basic"
+		},
+		{
+			"path": "0x06-unittests_in_js"
 		}
 	],
 	"settings": {}
