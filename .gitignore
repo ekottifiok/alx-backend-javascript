@@ -7,3 +7,4 @@ babel.config.js
 database.csv
 
 .*.swp
+0x06-unittests_in_js/pnpm-lock.yaml
