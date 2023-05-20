@@ -65,12 +65,6 @@ const ROUTE_HANDLERS = [
 ];
 
 app.on('request', (req, res) => {
-  // const responseText = 'Hello Holberton School!';
-
-  // res.setHeader('Content-Type', 'text/plain');
-  // res.setHeader('Content-Length', responseText.length);
-  // res.statusCode = 200;
-  // res.write(Buffer.from(responseText));
   for (const routeHandler of ROUTE_HANDLERS) {
     if (routeHandler.route === req.url) {
       routeHandler.handler(req, res);
