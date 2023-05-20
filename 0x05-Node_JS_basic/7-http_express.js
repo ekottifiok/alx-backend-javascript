@@ -17,10 +17,10 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
         else if (item[3] === 'SWE') SWE.push(item[0]);
       });
       resolve([
-        `Number of students: ${CS.length + SWE.length}\n`+
-        `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n`+
+        `Number of students: ${CS.length + SWE.length}\n` +
+        `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n` +
         `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`
-      ])
+      ]);
     }
   });
 });
@@ -47,7 +47,7 @@ app.get('/students', (_, res) => {
       res.statusCode = 200;
       res.write(Buffer.from(responseText));
     });
-})
+});
 
 app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`));
 

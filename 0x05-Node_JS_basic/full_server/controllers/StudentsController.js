@@ -10,7 +10,7 @@ const VALID_MAJORS = ['CS', 'SWE'];
  * @author Bezaleel Olakunori <https://github.com/B3zaleel>
  */
 class StudentsController {
-  static getAllStudents(_, response) {
+  static getAllStudents (_, response) {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
 
     readDatabase(dataPath)
@@ -32,7 +32,7 @@ class StudentsController {
           responseParts.push([
             `Number of students in ${field}: ${group.length}.`,
             'List:',
-            group.map((student) => student.firstname).join(', '),
+            group.map((student) => student.firstname).join(', ')
           ].join(' '));
         }
         response.status(200).send(responseParts.join('\n'));
@@ -44,7 +44,7 @@ class StudentsController {
       });
   }
 
-  static getAllStudentsByMajor(request, response) {
+  static getAllStudentsByMajor (request, response) {
     const dataPath = process.argv.length > 2 ? process.argv[2] : '';
     const { major } = request.params;
 
