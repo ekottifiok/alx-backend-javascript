@@ -47,7 +47,7 @@ describe('API integration test for /', () => {
   });
 
   it('POST /login returns valid response', (done) => {
-    post(`${URL}login`, {json: {userName: 'Udeme'}}, (_, res, body) => {
+    post(`${URL}login`, { json: { userName: 'Udeme' } }, (_, res, body) => {
       expect(res.statusCode).to.be.equal(200);
       expect(body).to.be.equal('Welcome Udeme');
       done();

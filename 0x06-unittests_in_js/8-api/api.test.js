@@ -11,3 +11,5 @@ describe('API integration test for /', () => {
     });
   });
 });
+
+/* eslint-env mocha */
