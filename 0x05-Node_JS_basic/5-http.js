@@ -13,10 +13,10 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
       const fileLines = data.toString('utf-8').trim().split('\n');
       const CS = [];
       const SWE = [];
-      fileLines.forEach(item => {
-        item = item.split(',');
-        if (item[3] === 'CS') CS.push(item[0]);
-        else if (item[3] === 'SWE') SWE.push(item[0]);
+      fileLines.forEach((item) => {
+        const splitted = item.split(',');
+        if (splitted[3] === 'CS') CS.push(splitted[0]);
+        else if (splitted[3] === 'SWE') SWE.push(splitted[0]);
       });
       console.log(`Number of students: ${CS.length + SWE.length}`);
       console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
@@ -29,7 +29,7 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
 const ROUTE_HANDLERS = [
   {
     route: '/',
-    handler (_, res) {
+    handler(_, res) {
       const responseText = 'Hello Holberton School!';
 
       res.setHeader('Content-Type', 'text/plain');
@@ -40,7 +40,7 @@ const ROUTE_HANDLERS = [
   },
   {
     route: '/students',
-    handler (_, res) {
+    handler(_, res) {
       const responseArr = ['This is the list of our students'];
 
       countStudents(DbFile)

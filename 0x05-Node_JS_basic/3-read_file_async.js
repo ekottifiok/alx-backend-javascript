@@ -3,7 +3,7 @@ const fs = require('fs');
 const countStudents = (fileName) => new Promise((resolve, reject) => {
   fs.readFile(fileName, 'utf-8', (err, data) => {
     if (err) reject(new Error('Cannot load the database'));
-    
+
     if (data) {
       const fileLines = data.toString('utf-8').trim().split('\n');
       const CS = [];
