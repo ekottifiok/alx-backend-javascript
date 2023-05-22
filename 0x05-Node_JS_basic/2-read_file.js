@@ -17,7 +17,7 @@ module.exports = function countStudents(fileName) {
   const CS = [];
   const SWE = [];
   fileLines.forEach((item) => {
-    let item = item.split(',');
+    var item = item.split(',');
     if (item[3] === 'CS') CS.push(item[0]);
     else if (item[3] === 'SWE') SWE.push(item[0]);
   });
