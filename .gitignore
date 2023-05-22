@@ -9,3 +9,6 @@ database.csv
 .*.swp
 pnpm-lock.yaml
 0x05-Node_JS_basic/5-http_students_test.js
+0x05-Node_JS_basic/full_server/.babelrc
+0x05-Node_JS_basic/full_server/utils.test.js
+0x05-Node_JS_basic/full_server/package.json
