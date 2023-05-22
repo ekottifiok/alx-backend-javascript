@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = function countStudents(fileName) {
+module.exports = function countStudents (fileName) {
   if (!fs.existsSync(fileName)) {
     throw new Error('Cannot load the database');
   }
