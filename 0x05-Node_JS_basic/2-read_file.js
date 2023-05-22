@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = function countStudents (fileName) {
+module.exports = function countStudents(fileName) {
   if (!fs.existsSync(fileName)) {
     throw new Error('Cannot load the database');
   }
@@ -16,8 +16,8 @@ module.exports = function countStudents (fileName) {
     .split('\n');
   const CS = [];
   const SWE = [];
-  fileLines.forEach(item => {
-    item = item.split(',');
+  fileLines.forEach((item) => {
+    let item = item.split(',');
     if (item[3] === 'CS') CS.push(item[0]);
     else if (item[3] === 'SWE') SWE.push(item[0]);
   });
