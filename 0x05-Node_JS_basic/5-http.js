@@ -19,9 +19,9 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
         else if (splitted[3] === 'SWE') SWE.push(splitted[0]);
       });
       resolve([
-        `Number of students: ${CS.length + SWE.length}\n` +
-        `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n` +
-        `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`
+        `Number of students: ${CS.length + SWE.length}\n`
+        + `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n`
+        + `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`,
       ]);
     }
   });
@@ -30,18 +30,18 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
 const ROUTE_HANDLERS = [
   {
     route: '/',
-    handler (_, res) {
+    handler(_, res) {
       const responseText = 'Hello Holberton School!';
 
       res.setHeader('Content-Type', 'text/plain');
       res.setHeader('Content-Length', responseText.length);
       res.statusCode = 200;
       res.write(Buffer.from(responseText));
-    }
+    },
   },
   {
     route: '/students',
-    handler (_, res) {
+    handler(_, res) {
       const responseArr = ['This is the list of our students'];
 
       countStudents(DbFile)
@@ -61,8 +61,8 @@ const ROUTE_HANDLERS = [
           res.statusCode = 200;
           res.write(Buffer.from(responseText));
         });
-    }
-  }
+    },
+  },
 ];
 
 app.on('request', (req, res) => {
