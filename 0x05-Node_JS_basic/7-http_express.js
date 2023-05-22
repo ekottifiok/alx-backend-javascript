@@ -11,15 +11,15 @@ const countStudents = (fileName) => new Promise((resolve, reject) => {
       const fileLines = data.toString('utf-8').trim().split('\n');
       const CS = [];
       const SWE = [];
-      fileLines.forEach(item => {
-        item = item.split(',');
-        if (item[3] === 'CS') CS.push(item[0]);
-        else if (item[3] === 'SWE') SWE.push(item[0]);
+      fileLines.forEach((item) => {
+        const splitted = item.split(',');
+        if (splitted[3] === 'CS') CS.push(splitted[0]);
+        else if (splitted[3] === 'SWE') SWE.push(splitted[0]);
       });
       resolve([
-        `Number of students: ${CS.length + SWE.length}\n` +
-        `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n` +
-        `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`
+        `Number of students: ${CS.length + SWE.length}\n`
+        + `Number of students in CS: ${CS.length}. List: ${CS.join(', ')}\n`
+        + `Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`,
       ]);
     }
   });
