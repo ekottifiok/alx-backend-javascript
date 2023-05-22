@@ -14,13 +14,16 @@ module.exports = function countStudents(fileName) {
     .toString('utf-8')
     .trim()
     .split('\n');
+
   const CS = [];
   const SWE = [];
+
   fileLines.forEach((item) => {
-    var item = item.split(',');
-    if (item[3] === 'CS') CS.push(item[0]);
-    else if (item[3] === 'SWE') SWE.push(item[0]);
+    const splitted = item.split(',');
+    if (splitted[3] === 'CS') CS.push(splitted[0]);
+    else if (splitted[3] === 'SWE') SWE.push(splitted[0]);
   });
+
   console.log(`Number of students: ${CS.length + SWE.length}`);
   console.log(`Number of students in CS: ${CS.length}. List: ${CS.join(', ')}`);
   console.log(`Number of students in SWE: ${SWE.length}. List: ${SWE.join(', ')}`);
